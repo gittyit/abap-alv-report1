@@ -37,13 +37,19 @@ CLASS ZCL_ABAP_ALV_REP1 IMPLEMENTATION.
       mo_cont1 = NEW cl_gui_custom_container( container_name = 'CONT1' ).
       mo_grid1 = NEW cl_gui_alv_grid( i_parent = mo_cont1 ).
 
-    ENDIF.
-
-    mo_grid1->set_table_for_first_display(
+      mo_grid1->set_table_for_first_display(
         EXPORTING
           i_structure_name = 'ZSABAP_ALV_REP1_DATA'
         CHANGING
           it_outtab = mt_data1 ).
+
+    ELSE.
+
+      mo_grid1->refresh_table_display( is_stable = CONV lvc_s_stbl('XX') ).
+
+    ENDIF.
+
+
 
   ENDMETHOD.
 
