@@ -34,6 +34,10 @@
        <COLUMN>001</COLUMN>
        <LENGTH>205</LENGTH>
        <HEIGHT>035</HEIGHT>
+       <C_RESIZE_V>X</C_RESIZE_V>
+       <C_RESIZE_H>X</C_RESIZE_H>
+       <C_LINE_MIN>017</C_LINE_MIN>
+       <C_COLN_MIN>102</C_COLN_MIN>
       </RPY_DYCATT>
      </CONTAINERS>
      <FIELDS>
