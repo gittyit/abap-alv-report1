@@ -164,6 +164,20 @@
     </item>
     <item>
      <ID>S</ID>
+     <KEY>SO_INCL</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>9</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SO_NAME</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>9</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
      <KEY>SO_OTYPE</KEY>
      <ENTRY>.</ENTRY>
      <LENGTH>9</LENGTH>
