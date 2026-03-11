@@ -157,7 +157,7 @@
    <TPOOL>
     <item>
      <ID>R</ID>
-     <ENTRY>Include ZABAP_ALV_REP1</ENTRY>
+     <ENTRY>ALV Report 1</ENTRY>
      <LENGTH>22</LENGTH>
     </item>
     <item>
