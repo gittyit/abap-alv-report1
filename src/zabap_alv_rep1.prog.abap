@@ -15,10 +15,10 @@ SELECT-OPTIONS: so_otype FOR wbcrossgt-otype,
 PARAMETERS: p_rows TYPE i DEFAULT 10000.
 
 INITIALIZATION.
-  lo_rep1 = NEW zcl_abap_alv_rep1( ).
+  go_rep1 = NEW zcl_abap_alv_rep1( ).
 
 START-OF-SELECTION.
-  lo_rep1->get_data( is_ss =
+  go_rep1->get_data( is_ss =
             VALUE zsabap_alv_rep1_selscr( so_otype = so_otype[]
                                           so_name = so_name[]
                                           so_incl = so_incl[]

@@ -4,4 +4,4 @@
 
 TABLES: WBCROSSGT.
 
-DATA lo_rep1 TYPE REF TO zcl_abap_alv_rep1.
+DATA go_rep1 TYPE REF TO zcl_abap_alv_rep1.
