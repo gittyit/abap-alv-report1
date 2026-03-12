@@ -158,7 +158,13 @@
     <item>
      <ID>R</ID>
      <ENTRY>ALV Report 1</ENTRY>
-     <LENGTH>22</LENGTH>
+     <LENGTH>12</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_NOADDS</KEY>
+     <ENTRY>Exclude add-ons from requests</ENTRY>
+     <LENGTH>37</LENGTH>
     </item>
     <item>
      <ID>S</ID>

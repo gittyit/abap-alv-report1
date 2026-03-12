@@ -7,12 +7,12 @@ REPORT zabap_alv_rep1.
 
 INCLUDE zabap_alv_rep1_top.
 INCLUDE zabap_alv_rep1_scr100.
-INCLUDE zabap_alv_rep1_f01.
 
 SELECT-OPTIONS: so_otype FOR wbcrossgt-otype,
                 so_name FOR wbcrossgt-name,
                 so_incl FOR wbcrossgt-include.
-PARAMETERS: p_rows TYPE i DEFAULT 10000.
+PARAMETERS: p_rows TYPE i DEFAULT 10000,
+            p_noadds AS CHECKBOX DEFAULT 'X'.
 
 INITIALIZATION.
   go_rep1 = NEW zcl_abap_alv_rep1( ).
@@ -22,5 +22,6 @@ START-OF-SELECTION.
             VALUE zsabap_alv_rep1_selscr( so_otype = so_otype[]
                                           so_name = so_name[]
                                           so_incl = so_incl[]
-                                          p_rows = p_rows ) ).
+                                          p_rows = p_rows
+                                          p_noadds = p_noadds ) ).
   CALL SCREEN 0100.

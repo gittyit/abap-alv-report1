@@ -44,6 +44,14 @@
      <MASK>  DEC</MASK>
      <DDTEXT>Number of rows</DDTEXT>
     </DD03P>
+    <DD03P>
+     <FIELDNAME>P_NOADDS</FIELDNAME>
+     <ROLLNAME>ZEABAP_P_NOADDS</ROLLNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <VALEXI>X</VALEXI>
+     <SHLPORIGIN>F</SHLPORIGIN>
+     <COMPTYPE>E</COMPTYPE>
+    </DD03P>
    </DD03P_TABLE>
   </asx:values>
  </asx:abap>

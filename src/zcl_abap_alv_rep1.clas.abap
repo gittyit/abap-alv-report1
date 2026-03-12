@@ -35,15 +35,28 @@ CLASS ZCL_ABAP_ALV_REP1 IMPLEMENTATION.
 
   METHOD get_data.
 
-    REFRESH: mt_data1.
-    SELECT * FROM wbcrossgt AS wt
+    DATA: lt_adds TYPE RANGE OF e071-trkorr.
+
+* Exclude add-ons from requests
+    IF is_ss-p_noadds = 'X'.
+      lt_adds = VALUE #( ( sign = 'E'
+                           option = 'CP'
+                           low = 'SAPK*' ) ).
+    ENDIF.
+
+
+    CLEAR: mt_data1.
+    SELECT wt~otype, wt~name, wt~include, e1~trkorr, e1~as4pos,
+           e1~pgmid, e1~object, e1~obj_name
+           FROM wbcrossgt AS wt
       JOIN e071 AS e1
       ON e1~obj_name = wt~name
-      INTO CORRESPONDING FIELDS OF TABLE @mt_data1
+      INTO TABLE @mt_data1
       UP TO @is_ss-p_rows ROWS
-      WHERE otype IN @is_ss-so_otype AND
-            name IN @is_ss-so_name AND
-            include IN @is_ss-so_incl.
+      WHERE wt~otype IN @is_ss-so_otype AND
+            wt~name IN @is_ss-so_name AND
+            wt~include IN @is_ss-so_incl AND
+            e1~trkorr IN @lt_adds.
 
   ENDMETHOD.
 
